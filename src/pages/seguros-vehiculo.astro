@@ -1,0 +1,34 @@
+---
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/sections/common/Header.astro";
+import Footer from "../components/sections/common/Footer.astro";
+import ComplianceNotice from "../components/sections/common/ComplianceNotice.astro";
+import Testimonials from "../components/sections/common/Testimonials.astro";
+import InsuranceDescription from "../components/sections/vehicleInsurance/InsuranceDescription.astro";
+import InsuranceDetail from "../components/sections/vehicleInsurance/InsuranceDetail.astro";
+import BannerServirProLocation from "../components/sections/common/BannerServirProLocation.astro";
+import ContactSectionBanner from "../components/sections/vehicleInsurance/ContactSectionBanner.astro";
+import InsuranceHero from "../components/sections/vehicleInsurance/InsuranceHero.astro";
+import OfficesCarousel from "../components/sections/OfficesCarousel.astro";
+
+import { whatsappLinks } from "../utils/whatsapp";
+---
+
+<Layout
+  title="Servicios | ServirPRO"
+  whatsapp={whatsappLinks.cotizarSeguroVehiculo}
+>
+  <Header />
+  <main class="bg-white">
+    <InsuranceHero />
+    <InsuranceDescription />
+    <InsuranceDetail />
+    <OfficesCarousel />
+    <BannerServirProLocation />
+    <Testimonials />
+    <ContactSectionBanner />
+  </main>
+  <ComplianceNotice />
+  <Footer whatsapp={whatsappLinks.cotizarSeguroVehiculo} />
+</Layout>

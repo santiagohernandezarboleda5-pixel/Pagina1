@@ -1,0 +1,41 @@
+---
+// Experience Panel component
+import { Image } from 'astro:assets';
+import experiencePanelWeb from '../../assets/images/experience_panel_web.webp';
+import experiencePanelMobile from '../../assets/images/experience_panel_mobile.webp';
+---
+
+<!-- Panel de Experiencia -->
+<section class="bg-servir-blue py-6 md:py-12 lg:py-16 border-b border-gray-200">
+  <!-- Contenedor con padding para desktop -->
+  <div class="hidden md:block bg-servir-blue p-4 lg:p-6">
+    <div class="relative bg-servir-blue">
+      <Image 
+        src={experiencePanelWeb} 
+        alt="Experience panel background" 
+        class="w-full h-auto object-contain rounded-lg"
+        loading="eager"
+        quality="max"
+        format="webp"
+        width={1920}
+        height={600}
+      />
+    </div>
+  </div>
+  
+  <!-- Contenedor con padding para mobile -->
+  <div class="md:hidden bg-servir-blue p-4">
+    <div class="relative lg bg-servir-blue">
+      <Image 
+        src={experiencePanelMobile} 
+        alt="Experience panel mobile background" 
+        class="w-full h-auto object-contain rounded-lg"
+        loading="eager"
+        quality="max"
+        format="webp"
+        width={768}
+        height={800}
+      />
+    </div>
+  </div>
+</section>
