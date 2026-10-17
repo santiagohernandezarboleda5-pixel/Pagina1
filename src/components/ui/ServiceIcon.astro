@@ -68,12 +68,12 @@ const titleParts = processTitle(title);
     class="bg-white rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-36 md:h-36 lg:w-48 lg:h-48 xl:w-56 xl:h-56 mx-auto flex flex-col items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300 p-3 md:p-4"
   >
     <div class="mb-2">
-   <Image
-  src={iconType}
+<img
+  src={iconType.src}
   alt={`${title} icon`}
-  width={64}
-  height={64}
-  class="w-14 h-14 md:w-16 md:h-16"
+  width="64"
+  height="64"
+  class="w-14 h-14 md:w-16 md:h-16 object-contain"
   loading="lazy"
 />
       />
