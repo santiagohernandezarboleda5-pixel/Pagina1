@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import detailMoney from "../../../assets/images/vehicleInsurance/Cash.webp";
 import detailsHero from "../../../assets/images/vehicleInsurance/Details-hero.webp";
 import detailsHeroMobile from "../../../assets/images/vehicleInsurance/Details-hero-mobile.webp";
@@ -9,16 +8,16 @@ import detailsHeroMobile from "../../../assets/images/vehicleInsurance/Details-h
   class="relative rounded-4xl w-4/5 md:w-3/5 min-h-screen md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] text-white overflow-hidden flex flex-col items-center text-center mx-auto py-8 pb-12 md:pb-20 mt-32 md:mt-16 lg:-mt-30 md:px-0 md:py-30 lg:py-38"
 >
   <!-- Imagen de fondo Mobile -->
-  <Image
-    src={detailsHeroMobile}
+ <img
+  src={detailsHeroMobile.src}
     alt="Hero detalle móvil"
     class="md:hidden absolute top-0 right-0 w-full h-auto rounded-bl-3xl object-cover z-0"
   />
 
   <!-- Imagen Desktop -->
-  <Image
-    src={detailsHero}
-    alt="Hero detalle"
+<img
+  src={detailsHero.src}
+  alt="Hero detalle"
     class="hidden md:block absolute top-0 left-0 w-full h-full rounded-bl-3xl object-contain z-0"
   />
   
@@ -110,7 +109,7 @@ import detailsHeroMobile from "../../../assets/images/vehicleInsurance/Details-h
         </div>
         <!-- Imagen de dinero Mobile -->
         <div class="absolute right-5 -bottom-6">
-          <Image src={detailMoney} alt="Dinero" class="w-24 h-14" />
+        <img src={detailMoney.src} alt="Dinero" class="w-24 h-14" />
         </div>
       </div>
     </div>
@@ -201,7 +200,7 @@ import detailsHeroMobile from "../../../assets/images/vehicleInsurance/Details-h
         
         <!-- Imagen de dinero  -->
         <div class="relative -right-20 md:-right-75 lg:-right-50 xl:-right-100 bottom-0 md:bottom-10 lg:bottom-18">
-          <Image src={detailMoney} alt="Dinero" class="w-[200px] md:w-[100px] lg:w-[300px] xl:w-[170px] h-auto" />
+          <img src={detailMoney.src} alt="Dinero" class="w-[200px] md:w-[100px] lg:w-[300px] xl:w-[170px] h-auto" />
         </div>
       </div>
     </div>
