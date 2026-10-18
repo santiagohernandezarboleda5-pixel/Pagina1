@@ -21,20 +21,17 @@ const description = titleParts.keyword;
 ---
 
 <a href={href} class="group block">
-  <div class="bg-white rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-36 md:h-36 lg:w-48 lg:h-48 xl:w-56 xl:h-56 mx-auto flex flex-col items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 p-2">
+  <div class="bg-white rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-36 md:h-36 lg:w-48 lg:h-48 xl:w-56 xl:h-56 mx-auto flex flex-col items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
     <div class="mb-2">
-      <img
-        src={iconType.src}
+      <Image 
+        src={iconType} 
         alt={`${title} icon`}
-        width="64"
-        height="64"
-        class="w-14 h-14 md:w-16 md:h-16 object-contain"
-        loading="lazy"
+        class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
       />
     </div>
-    <h3 class="text-xs md:text-sm font-semibold text-gray-900 group-hover:text-servir-blue transition-colors duration-300 text-center leading-tight description">
-      {titleParts.beforeKeyword && <span>{titleParts.beforeKeyword} </span>}
-      <span class="font-bold description">{titleParts.keyword}</span>
-    </h3>
+    <div class="text-center px-2">
+      <p class="text-xs sm:text-sm font-medium">{titleParts.beforeKeyword}</p>
+      <p class="text-xs sm:text-sm font-bold text-blue-600">{titleParts.keyword}</p>
+    </div>
   </div>
 </a>
