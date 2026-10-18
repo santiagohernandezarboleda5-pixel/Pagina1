@@ -1,6 +1,5 @@
 ---
 // AdditionalServices.astro - Servicios adicionales (asesoría y trámites)
-import { Image } from 'astro:assets';
 
 // Importar iconos SVG
 import asesoriaPersonalizadaIcon from '../../assets/iconos/asesoria_personalizada.svg';
@@ -17,7 +16,7 @@ import tramitesRapidosIcon from '../../assets/iconos/tramites_rapidos.svg';
                 class="flex flex-col md:flex-row items-center justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-6 text-center md:text-left">
                 <!-- Icono -->
                 <div class="flex-shrink-0">
-                    <Image src={asesoriaPersonalizadaIcon} 
+                    <img src={asesoriaPersonalizadaIcon.src}
                            alt="Asesoría personalizada" 
                            class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24" />
                 </div>
@@ -34,7 +33,7 @@ import tramitesRapidosIcon from '../../assets/iconos/tramites_rapidos.svg';
                 class="flex flex-col md:flex-row items-center justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-6 text-center md:text-left">
                 <!-- Icono -->
                 <div class="flex-shrink-0">
-                    <Image src={tramitesRapidosIcon} 
+                    <img src={tramitesRapidosIcon.src}
                            alt="Trámites fáciles y rápidos" 
                            class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24" />
                 </div>
