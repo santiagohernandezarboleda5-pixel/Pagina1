@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import heroBg from '../../../assets/images/vehicleInsurance/Hero.webp';
 import heroBgMobile from '../../../assets/images/vehicleInsurance/Hero-mobile.webp';
 import { whatsappLinks } from "../../../utils/whatsapp";
@@ -20,9 +19,9 @@ const buttonText = "Cotizar seguro vehicular";
     >
       <!-- Imagen de fondo usando el componente Image -->
       <!-- Desktop y Tablet -->
-      <Image src={heroBg} alt="Seguro vehicular" class="absolute inset-0 w-full h-full object-cover hidden sm:block" />
+     <img src={heroBg.src} alt="Seguro vehicular" class="absolute inset-0 w-full h-full object-cover hidden sm:block" />
       <!-- Mobile -->
-      <Image src={heroBgMobile} alt="Seguro vehicular mobile" class="absolute inset-0 w-full h-full border-none object-cover sm:hidden" />
+    <img src={heroBgMobile.src} alt="Seguro vehicular mobile" class="absolute inset-0 w-full h-full border-none object-cover sm:hidden" />
       
       <!-- Banda de título en tablet y desktop -->
       
