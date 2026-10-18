@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-
 interface Props {
   title: string;
   iconType: any;
@@ -17,21 +15,23 @@ function processTitle(text: string) {
 }
 
 const titleParts = processTitle(title);
-const description = titleParts.keyword;
+const finalSrc = iconType?.src ? iconType.src : iconType;
 ---
 
 <a href={href} class="group block">
-  <div class="bg-white rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-36 md:h-36 lg:w-48 lg:h-48 xl:w-56 xl:h-56 mx-auto flex flex-col items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
-    <div class="mb-2">
-      <Image 
-        src={iconType} 
-        alt={`${title} icon`}
+  <div class="bg-white rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-36 md:h-36 lg:w-48 lg:h-48 xl:w-56 xl:h-56 mx-auto flex flex-col items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
+    <div class="mb-2 w-16 h-16 flex items-center justify-center">
+      <img 
+        src={finalSrc} 
+        alt={title}
+        width="48"
+        height="48"
         class="w-12 h-12 sm:w-14 sm:h-14 object-contain"
       />
     </div>
-    <div class="text-center px-2">
-      <p class="text-xs sm:text-sm font-medium">{titleParts.beforeKeyword}</p>
-      <p class="text-xs sm:text-sm font-bold text-blue-600">{titleParts.keyword}</p>
+    <div class="text-center px-1">
+      <p class="text-[10px] sm:text-xs leading-tight">{titleParts.beforeKeyword}</p>
+      <p class="text-[10px] sm:text-xs font-bold text-blue-600 leading-tight">{titleParts.keyword}</p>
     </div>
   </div>
 </a>
