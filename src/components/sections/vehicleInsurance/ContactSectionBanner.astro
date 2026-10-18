@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import contactBannerWeb from '../../../assets/images/vehicleInsurance/Contact-banner.webp';
 import contactBannerMobile from '../../../assets/images/vehicleInsurance/Contact-banner-mobile.webp';
 import { whatsappLinks } from "../../../utils/whatsapp";
@@ -9,21 +8,20 @@ import { whatsappLinks } from "../../../utils/whatsapp";
 <!-- Sección de Contacto -->
 <section class="relative py-0 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden max-h-[600px]  md:min-h-[670px]">
     <!-- Imagen de fondo para desktop -->
-    <Image 
-        src={contactBannerWeb} 
-        alt="Contacto ServirPRO" 
-        class="absolute inset-0 w-full h-full object-cover z-0 hidden sm:block"
-        loading="lazy"
-        quality={90}
+    <img
+  src={contactBannerWeb.src}
+  alt="Contacto ServiPRO"
+  class="absolute inset-0 w-full h-full object-cover z-0 hidden sm:block"
+  loading="lazy"
     />
     
     <!-- Imagen de fondo para mobile -->
-    <Image 
-        src={contactBannerMobile} 
-        alt="Contacto ServirPRO mobile" 
-        class="absolute inset-0 w-full h-full object-cover object-top z-0 sm:hidden"
-        loading="lazy"
-        quality={90}
+    <img
+  src={contactBannerMobile.src}
+  alt="Contacto ServirPRO mobile"
+  class="absolute inset-0 w-full h-full object-cover object-top z-0 sm:hidden"
+  loading="lazy"
+/>
     />
 
     <!-- Contenido -->
