@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import BenefitItem from '../../ui/BenefitItem.astro';
  
 // Imagen del título
@@ -20,8 +19,8 @@ import { whatsappLinks } from "../../../utils/whatsapp";
 <section class="w-full flex flex-col items-center justify-center text-center px-6 py-16 md:py-10 bg-white -mt-25">
   <!-- Imagen del título -->
   <div class="mb-12">
-    <Image src={tituloImg} alt="Una póliza de salud te brinda" class="mx-auto w-[400px] md:w-[800px] md:h-[120px] object-cover hidden sm:block"/>
-    <Image src={tituloImgMobile} alt="Una póliza de salud te brinda" class="mx-auto w-[400px] md:w-[600px] md:h-[120px] object-cover sm:hidden"/>
+    <img src={tituloImg.src} alt="Una póliza de salud te brinda"...
+<img src={tituloImgMobile.src} alt="Una póliza de salud te brinda"...
 
   </div>
 
